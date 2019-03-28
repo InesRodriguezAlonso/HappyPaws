@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_lost"
+        android:icon="@drawable/ic_lost_24px"
+        android:title="@string/title_lost" />
+
+    <item
+        android:id="@+id/navigation_adoption"
+        android:icon="@drawable/ic_heart_24px"
+        android:title="@string/title_adoption" />
+</menu>

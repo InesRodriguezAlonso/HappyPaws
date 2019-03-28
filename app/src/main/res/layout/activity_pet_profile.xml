@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".home.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_anchorGravity="bottom"
+        app:toolbarId="@+id/toolbar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_pet_profile_collapsing_toolbar_height"
+            android:background="@color/color_hell_grey"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_pet_profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop" />
+
+            <androidx.appcompat.widget.ContentFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_pet_profile_collapsing_toolbar_height">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_pet_profile_view_image_shadow_height"
+                    app:srcCompat="@drawable/black_top_shadow" />
+
+            </androidx.appcompat.widget.ContentFrameLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_pet_profile_view_image_shadow_height"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/black_bottom_shadow" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll"
+                app:navigationIcon="@drawable/ic_toolbar_navigation_24px"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@android:color/white" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_hell_grey"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardCornerRadius="@dimen/card_view_corner_radius"
+                app:cardElevation="@dimen/card_view_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/material_margin_small"
+                    android:paddingEnd="@dimen/material_margin_normal"
+                    android:paddingStart="@dimen/material_margin_normal"
+                    android:paddingTop="@dimen/material_margin_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/material_margin_small"
+                        android:paddingTop="@dimen/material_margin_tiny"
+                        android:text="@string/activity_pet_profile_about"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/material_text_size_big" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_pet_type"
+                            android:layout_width="@dimen/icon_normal_size"
+                            android:layout_height="@dimen/icon_normal_size"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/material_margin_normal" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_pet_gender"
+                            android:layout_width="@dimen/icon_normal_size"
+                            android:layout_height="@dimen/icon_normal_size"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/material_margin_tiny" />
+
+                        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <io.supercharge.shimmerlayout.ShimmerLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="@dimen/activity_pet_profile_bt_adopt_me_height"
+                                app:shimmer_animation_duration="@integer/activity_pet_profile_bt_adopt_shimmer_effect_duration"
+                                app:shimmer_auto_start="true"
+                                app:shimmer_color="@color/color_primary_dark">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/bt_adopt_me"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_border"
+                                    android:layout_gravity="end"
+                                    android:padding="@dimen/material_margin_small"
+                                    style="@style/AdoptButton"
+                                    android:textColor="@color/color_white"
+                                    android:visibility="gone"
+                                    android:textAllCaps="true"
+                                    android:text="@string/activity_pet_profile_adopt_me" />
+                            </io.supercharge.shimmerlayout.ShimmerLayout>
+                        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/material_margin_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/ActivityProfileTitleStyle"
+                            android:text="@string/activity_pet_profile_breed" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pet_breed"
+                            style="@style/ActivityProfileSubTitle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/material_margin_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/ActivityProfileTitleStyle"
+                            android:text="@string/activity_pet_profile_age" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pet_age"
+                            style="@style/ActivityProfileSubTitle"
+                            android:paddingTop="@dimen/material_margin_small" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/material_margin_small">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/ActivityProfileTitleStyle"
+                            android:text="@string/activity_pet_profile_registration_date" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pet_registration_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/material_margin_small"
+                            android:textColor="@color/color_black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardCornerRadius="@dimen/card_view_corner_radius"
+                app:cardElevation="@dimen/card_view_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/material_margin_small"
+                        android:paddingEnd="@dimen/material_margin_normal"
+                        android:paddingStart="@dimen/material_margin_normal"
+                        android:paddingTop="@dimen/material_margin_small"
+                        android:text="@string/activity_pet_profile_history"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/material_text_size_big" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_pet_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/material_margin_normal"
+                        android:paddingEnd="@dimen/material_margin_normal"
+                        android:paddingStart="@dimen/material_margin_normal"
+                        android:paddingTop="@dimen/material_margin_small"
+                        android:textColor="@color/color_black" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

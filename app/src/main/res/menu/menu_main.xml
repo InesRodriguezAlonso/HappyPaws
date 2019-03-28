@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.braunster.androidchatsdk.app.MainActivity">
+
+    <item
+        android:id="@+id/menu_ong_locations"
+        android:icon="@drawable/ic_location_24px"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_ong_locations" />
+
+</menu>

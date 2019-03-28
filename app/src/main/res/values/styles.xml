@@ -1,0 +1,71 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/slide_right</item>
+        <item name="android:windowExitTransition">@android:transition/slide_left</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColorPrimary">@color/color_white</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="background">@color/color_hell_grey</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ActivityProfileTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">@dimen/material_margin_small</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingTop">@dimen/material_margin_small</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/material_text_size_normal</item>
+    </style>
+
+    <style name="ActivityProfileSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingEnd">@dimen/material_margin_small</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingTop">@dimen/material_margin_small</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/material_text_size_normal</item>
+    </style>
+
+    <style name="ActivityAdoptFormHintStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/material_margin_small</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/material_text_size_normal</item>
+        <item name="android:textColorHint">@color/color_dark_grey</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <style name="AdoptButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/color_primary_dark</item>
+        <item name="colorButtonNormal">@color/color_hell_grey</item>
+    </style>
+</resources>

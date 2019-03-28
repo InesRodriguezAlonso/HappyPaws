@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">HappyPaws</string>
+
+    <!-- Maine screen -->
+    <string name="title_adoption">Adoption</string>
+    <string name="title_lost">Lost</string>
+
+    <!-- RES strings -->
+    <string name="on_success_response">Get result from web service</string>
+    <string name="on_error_response">Error: %s</string>
+
+    <!-- Activity pet profile -->
+    <string name="activity_pet_profile_no_registration_date">--/--/--</string>
+    <string name="activity_pet_profile_no_age">--</string>
+    <string name="activity_pet_profile_about">About</string>
+    <string name="activity_pet_profile_history">History</string>
+    <string name="activity_pet_profile_breed">Breed:</string>
+    <string name="activity_pet_profile_adopt_me">Adopt me!</string>
+    <string name="activity_pet_profile_registration_date">Registration date:</string>
+    <string name="activity_pet_profile_age">Age:</string>
+    <string name="activity_profile_alert_form_sent">Form has been sent, we will contact you to make an appointment</string>
+    <plurals name="activity_pet_profile_age_formatted_months">
+        <item quantity="one">&#160; and %s month</item>
+        <item quantity="other">&#160; %s months</item>
+    </plurals>
+    <plurals name="activity_pet_profile_age_formatted_years">
+        <item quantity="one">%s year</item>
+        <item quantity="other">%s years</item>
+    </plurals>
+
+    <!-- Activity adoption -->
+    <string name="activity_adoption_title">Adopt %s!</string>
+    <string name="activity_adoption_subtitle">First remember that:</string>
+    <string name="activity_adoption_warning_one">1. You will be screened and interviewed (by phone and in person).</string>
+    <string name="activity_adoption_warning_two">2. You will be home checked and/or required to provide references.</string>
+    <string name="activity_adoption_warning_three">3. ALL members of the family and ANY dog(s) who live in the house must come to meet the new dog and us.</string>
+    <string name="activity_adoption_subtitle_explanation">We just need to get a few details from you.</string>
+    <string name="activity_adoption_tell_us_about_you_hint">Tell us a bit about you and reason for selecting this dog. Please answer honestly.</string>
+    <string name="activity_adoption_name_hint">Name</string>
+    <string name="activity_adoption_address_hint">Address</string>
+    <string name="activity_adoption_email_hint">E-mail</string>
+    <string name="activity_adoption_phone_number_hint">Phone Number</string>
+    <string name="activity_adoption_name_error_hint">Invalid name</string>
+    <string name="activity_adoption_address_error_hint">Invalid address</string>
+    <string name="activity_adoption_email_error_hint">Invalid email</string>
+    <string name="activity_adoption_phone_number_error_hint">Invalid phone number</string>
+    <string name="activity_adoption_about_you_error_hint">Invalid description</string>
+    <string name="activity_adoption_error_form_not_valid">Form not valid, please fill all text fields.</string>
+    <string name="activity_adoption_send_form">Send</string>
+
+    <!-- Menus -->
+    <string name="menu_ong_locations">Locations</string>
+
+    <!-- ResApi Errors-->
+    <string name="ong_locations_activity_title">Our locations</string>
+    <string name="unexpected_error">Unexpected error, please try it later.</string>
+
+</resources>

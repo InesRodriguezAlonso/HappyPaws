@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="activity_pet_profile_bt_adopt_shimmer_effect_duration">2000</integer>
+
+</resources>

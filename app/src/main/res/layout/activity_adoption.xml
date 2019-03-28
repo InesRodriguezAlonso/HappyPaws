@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:fillViewport="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/material_margin_normal"
+            android:paddingTop="@dimen/material_margin_medium"
+            app:cardBackgroundColor="@color/color_hell_grey"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="@dimen/card_view_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="@dimen/material_margin_normal"
+                android:paddingTop="@dimen/material_margin_normal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_pet_profile_image"
+                    android:layout_width="@dimen/activity_adoption_circular_profile_image_size"
+                    android:layout_height="@dimen/activity_adoption_circular_profile_image_size"
+
+                    android:paddingTop="@dimen/material_margin_medium"
+                    app:civ_border_color="@color/color_primary_dark"
+                    app:civ_border_width="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/material_margin_normal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/input_text"
+                style="@style/ActivityProfileTitleStyle"
+                android:text="@string/activity_adoption_subtitle"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ActivityProfileTitleStyle"
+                android:text="@string/activity_adoption_warning_one"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ActivityProfileTitleStyle"
+                android:text="@string/activity_adoption_warning_two"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ActivityProfileTitleStyle"
+                android:text="@string/activity_adoption_warning_three"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ActivityProfileTitleStyle"
+                android:layout_marginTop="@dimen/material_margin_normal"
+                android:text="@string/activity_adoption_subtitle_explanation"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_name"
+                    style="@style/ActivityAdoptFormHintStyle"
+                    android:layout_marginTop="@dimen/material_margin_big"
+                    android:hint="@string/activity_adoption_name_hint"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_address"
+                    style="@style/ActivityAdoptFormHintStyle"
+                    android:layout_marginTop="@dimen/material_margin_big"
+                    android:hint="@string/activity_adoption_address_hint"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    style="@style/ActivityAdoptFormHintStyle"
+                    android:layout_marginTop="@dimen/material_margin_big"
+                    android:hint="@string/activity_adoption_email_hint"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_phone_number"
+                    style="@style/ActivityAdoptFormHintStyle"
+                    android:layout_marginTop="@dimen/material_margin_big"
+                    android:hint="@string/activity_adoption_phone_number_hint"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_about_you"
+                    style="@style/ActivityAdoptFormHintStyle"
+                    android:layout_marginBottom="@dimen/material_margin_big"
+                    android:layout_marginTop="@dimen/material_margin_normal"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/activity_adoption_tell_us_about_you_hint"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_adoption_bt_send_form_height"
+            android:background="@color/color_primary">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_send_adoption_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackground"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/material_text_size_medium"
+                android:textAllCaps="true"
+                android:text="@string/activity_adoption_send_form" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+
